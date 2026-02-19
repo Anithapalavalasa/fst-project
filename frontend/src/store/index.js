@@ -27,7 +27,7 @@ const store = createStore({
                 context.commit("setFoodsData", response.data);
             })
             .catch(function (error) {
-                console.log(error);
+console.error(error);
             });
         },
     }
