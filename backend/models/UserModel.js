@@ -30,7 +30,7 @@ export const getUserByEmail = (data,result) => {
 export const insertUser = (data,result) => {
     db.query("INSERT INTO user SET ?",data, (err,results)=> {
         if (err){
-            console.log(err);
+// console.log(err);
             result(err,null);
         }else{
             result(null,results[0]);
