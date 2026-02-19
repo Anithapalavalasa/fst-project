@@ -81,7 +81,7 @@ export const updateStatus = (id,result) => {
 export const updatePaid = (id,result) => {
     db.query("UPDATE billstatus SET bill_paid = 'true' WHERE bill_id = ?",id, (err,results)=> {
             result(err,null);
-            console.log(err);
+
             result(err,null);
         }else{
             result(null,results);
@@ -91,8 +91,8 @@ export const updatePaid = (id,result) => {
 
 export const cancelStatus = (id,result) => {
     db.query("UPDATE billstatus SET bill_status = 0  WHERE bill_id = ?",id, (err,results)=> {
-            result(err,null);
-            console.log(err);
+
+            // console.log(err);
             result(err,null);
         }else{
             result(null,results);
@@ -100,7 +100,7 @@ export const cancelStatus = (id,result) => {
     });
     db.query("UPDATE billstatus SET bill_paid = 'false' WHERE bill_id = ?",id, (err,results)=> {
         if (err){
-            console.log(err);
+
             result(err,null);
             result(err,null);
     });
